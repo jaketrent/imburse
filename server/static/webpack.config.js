@@ -2,7 +2,9 @@ const path = require('path')
 const webpack = require('webpack')
 
 module.exports = {
-  entry: path.join(__dirname, '..', '..', 'client', 'index.js'),
+  entry: [
+    path.join(__dirname, '..', '..', 'client', 'index.ts')
+  ],
   output: {
     path: path.join(__dirname, '..', '..', 'dist'),
     filename: 'index.js',
@@ -14,16 +16,15 @@ module.exports = {
     })
   ],
   module: {
-    preLoaders: [{ 
+    loaders: [{
+      test: /\.ts$$/,
+      loaders: ['ts'],
+      excludes: /node_modules/
+    }, {
       test: /\.tag$/,
       loader: 'riotjs',
-      query: { type: 'none' },
-      exclude: /node_modules/   
-    }],
-    loaders: [{
-      test: /\.js$|\.tag$/,
-      loaders: ['babel'],
-      excludes: /node_modules/
+      query: { type: 'typescript' },
+      exclude: /node_modules/
     }]
   }
 }

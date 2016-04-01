@@ -1,0 +1,21 @@
+{
+  "atom": {
+    "formatOnSave": false,
+    "rewriteTsconfig": false
+  },
+  "buildOnSave": false,
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": true
+  },
+  "filesGlob": [
+    "./typings/**/*.d.ts",
+    "./client/**/*.ts",
+    "./client/**/*.tag"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

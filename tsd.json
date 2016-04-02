@@ -7,6 +7,12 @@
   "installed": {
     "node/node.d.ts": {
       "commit": "e937b3e64af586d19f2ea29fdf771e9dc4feecc8"
+    },
+    "riotjs/riotjs.d.ts": {
+      "commit": "e8f8e7471b8ca92ca417f8c878f64ae4d1067972"
+    },
+    "jquery/jquery.d.ts": {
+      "commit": "e8f8e7471b8ca92ca417f8c878f64ae4d1067972"
     }
   }
 }

@@ -1,6 +1,6 @@
 const riot = require('riot')
 
-require('./imburse.tag')
-require('./dispense.tag')
-
-riot.mount('*')
+require('./imburse/index.ts')
+// require('./dispense.tag')
+//
+// riot.mount('dispense')

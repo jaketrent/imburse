@@ -17,6 +17,10 @@ module.exports = {
   ],
   module: {
     loaders: [{
+      test: /\.css$$/,
+      loaders: ['style', 'css?modules&localIdentName=[local]---[hash:base64:5]'],
+      excludes: /node_modules/
+    }, {
       test: /\.ts$$/,
       loaders: ['ts'],
       excludes: /node_modules/

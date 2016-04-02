@@ -17,17 +17,16 @@ module.exports = {
   ],
   module: {
     loaders: [{
-      test: /\.css$$/,
+      test: /\.css$/,
       loaders: ['style', 'css?modules&localIdentName=[local]---[hash:base64:5]'],
       excludes: /node_modules/
     }, {
-      test: /\.ts$$/,
-      loaders: ['ts'],
+      test: /\.ts$/,
+      loaders: ['babel', 'ts'],
       excludes: /node_modules/
     }, {
       test: /\.tag$/,
-      loader: 'riotjs',
-      query: { type: 'typescript' },
+      loaders: ['babel', 'riotjs?type=typescript'],
       exclude: /node_modules/
     }]
   }

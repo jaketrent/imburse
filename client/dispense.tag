@@ -6,6 +6,6 @@
     h1 { padding: 5px; font-family: sans-serif;
   </style>
 
-  var text: string = 'Lots o Stuff'
+  var text = 'Lots o Stuff'
   this.text = text
 </dispense>

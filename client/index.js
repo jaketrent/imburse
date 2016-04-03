@@ -1,6 +1,4 @@
-const riot = require('riot')
-
-require('./imburse')
+import './imburse'
 // require('./dispense.tag')
 //
 // riot.mount('dispense')

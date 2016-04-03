@@ -1,4 +1,4 @@
-const css = require('./index.css')
-const tag = require('./index.tag')
+import css from './index.css'
+import tag from './index.tag'
 
 riot.mount('imburse', { css })

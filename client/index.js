@@ -1,4 +1,5 @@
-import './imburse'
-// require('./dispense.tag')
-//
-// riot.mount('dispense')
+import riot from 'riot'
+
+import './imburse/index.tag'
+
+riot.mount('imburse')

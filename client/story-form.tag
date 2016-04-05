@@ -1,4 +1,4 @@
-import css from './index.css'
+import css from './story-form.css'
 
 <story-form>
   <div class={css.root}>

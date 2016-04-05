@@ -1,5 +1,5 @@
 import riot from 'riot'
 
-import './imburse/index.tag'
+import './imburse.tag'
 
 riot.mount('imburse')

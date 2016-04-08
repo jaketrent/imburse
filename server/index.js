@@ -1,8 +1,11 @@
+require('dotenv').config()
+
 const logger = require('koa-logger')
 const koa = require('koa')
 const mount = require('koa-mount')
 const route = require('koa-route')
 
+const db = require('./db')
 const render = require('./common/render')
 const static = require('./static')
 const stories = require('./stories')
@@ -19,4 +22,7 @@ function* home() {
   this.body = yield render('home.jade')
 }
 
-app.listen(3000)
+db.connect((_, db) => {
+  app.context.db = db
+  app.listen(3000)
+})

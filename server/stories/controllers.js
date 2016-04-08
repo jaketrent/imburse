@@ -1,3 +1,6 @@
+const db = require('./db')
+
 exports.list = function* list() {
-  this.body = [{ title: 'Some story', desc: 'Some desc' }]
+  const stories = yield db.find(this.app.context.db)
+  this.body = stories
 }

@@ -4,3 +4,4 @@ dist
 config.ru
 tmp
 typings
+.env*

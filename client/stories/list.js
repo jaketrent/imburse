@@ -1,7 +1,7 @@
 import RiotControl from 'riotcontrol'
 
 import StoryListStore from './store'
-import './index.tag'
+import './list.tag'
 
 const store = new StoryListStore()
 

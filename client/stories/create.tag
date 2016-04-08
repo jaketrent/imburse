@@ -1,6 +1,6 @@
 import RiotControl from 'riotcontrol'
 
-import css from './story-form.css'
+import css from './create.css'
 
 function formatCreateDate(date = new Date()) {
   return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`

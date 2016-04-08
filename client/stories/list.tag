@@ -1,6 +1,6 @@
 import RiotControl from 'riotcontrol'
 
-import css from './index.css'
+import css from './list.css'
 
 <story-list>
   <ul class={css.root}>

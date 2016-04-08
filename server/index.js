@@ -5,12 +5,14 @@ const route = require('koa-route')
 
 const render = require('./common/render')
 const static = require('./static')
+const stories = require('./stories')
 
 const app = koa()
 app.name = 'imburse'
 
 app.use(logger())
 app.use(mount('/static', static))
+app.use(mount('/api/stories', stories))
 app.use(route.get('/', home))
 
 function* home() {

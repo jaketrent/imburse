@@ -1,10 +1,6 @@
-import RiotControl from 'riotcontrol'
-
+import * as actions from './actions'
 import css from './create.css'
-
-function formatCreateDate(date = new Date()) {
-  return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
-}
+import * as utils from './utils'
 
 <story-form>
   <div class={css.root}>
@@ -27,8 +23,8 @@ function formatCreateDate(date = new Date()) {
     evt.preventDefault()
     const title = document.getElementById('title').value
     const desc = document.getElementById('desc').value
-    const created = formatCreateDate()
+    const created = utils.formatCreateDate()
 
-    RiotControl.trigger('stories_add', { title, desc, created })
+    actions.create({ title, desc, created })
   }
 </story-form>

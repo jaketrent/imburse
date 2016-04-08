@@ -1,6 +1,6 @@
 import css from './imburse.css'
 import './story-form.tag'
-import './story-list.tag'
+import './story-list'
 
 <imburse>
   <div class={css.root}>

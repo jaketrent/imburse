@@ -10,6 +10,8 @@ const render = require('./common/render')
 const static = require('./static')
 const stories = require('./stories')
 
+const port = process.env.PORT || 3000
+
 const app = koa()
 app.name = 'imburse'
 
@@ -24,5 +26,6 @@ function* home() {
 
 db.connect((_, db) => {
   app.context.db = db
-  app.listen(3000)
+  app.listen(port)
+  console.log(`Listening on port ${port}...`)
 })
